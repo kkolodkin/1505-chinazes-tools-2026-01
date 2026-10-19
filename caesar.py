@@ -7,3 +7,6 @@ def encrypt(text, n): # текст и сдвиг
         k = n % len(i)
         table.update(str.maketrans(i, i[k:] + i[:k]))
     return text.translate(table)
+
+def decrypt(text, n):
+    return encrypt(text, -n) # все гениальное факинг просто
