@@ -1,28 +1,12 @@
-import test
-
-
-def print_menu():
-    print(
-'''
-============================
-Menu options
-
-1. Run Test Module
-2. Exit
-============================
-''')
-
-print("Hello! Welcome to Chinazes Tools!")
-
-while 1:
-    print_menu()
-    user_choice = input("Select a menu option number: ")
-    print()
-    
-    if user_choice == '1':
-        test.run()
-    elif user_choice == '2':
-        print("Bye!")
-        break
-    else:
-        print("Invalid choice. Try again.")
+import requests
+text = input("Введите текст на английском (до 200 символов): ")
+if not text or len(text) > 200:
+    print("Ошибка, текст пустой или превышает 200 символов. ")
+else:
+    url = "https://api.mymemory.translated.net/get"
+    params = {"q": text, "langpair": "en|ru"}
+    try:
+        data = requests.get(url, params=params, timeout=10).json
+        print(data["responseData"]["translatedText"])
+    except Exception:
+        print("Произошла ошибка при выполнении запроса или переводе.")
