@@ -1,9 +1,9 @@
 RU = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
 EN = "abcdefghijklmnopqrtsuvwxyz"
-
+DIGITS = "0123456789"
 def encrypt(text, n): # текст и сдвиг
     table = {}
-    for i in (RU, RU.upper(), EN, EN.upper()):
+    for i in (RU, RU.upper(), EN, EN.upper(), DIGITS):
         k = n % len(i)
         table.update(str.maketrans(i, i[k:] + i[:k]))
     return text.translate(table)
@@ -11,5 +11,13 @@ def encrypt(text, n): # текст и сдвиг
 def decrypt(text, n):
     return encrypt(text, -n) # все гениальное факинг просто
 
-#Должна корректно работать цифрами и спецсимволами.
-#Система должна осуществлять запрос n у пользователя.
+def run():
+    com = input("Выберите режим ([ш]ифрование/[д]ешифрование): ")
+    orig = input("Введите текст сообщения: ")
+    n = int(input("Введите сдвиг: "))
+    if com == 'ш':
+        print(encrypt(orig, n))
+    elif com == 'д':
+        print(decrypt(orig, n))
+    else:
+        print("Неизвестная команда")s
