@@ -36,5 +36,3 @@ def play():
         print(f'{b} бык(а/ов) и {k} коров(ы)')
         if b == 4:
             print(f'\n Поздравляем! Вы угадали число {secret} за {att} попыток!')
-if __name__ == '__main__':
-    play()
