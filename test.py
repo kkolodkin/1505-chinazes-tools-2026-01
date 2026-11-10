@@ -1,2 +1,2 @@
-def run():
-    print("test msg printed!")
+import caesar
+caesar.run()

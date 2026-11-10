@@ -1,7 +1,7 @@
 RU = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
 EN = "abcdefghijklmnopqrtsuvwxyz"
 DIGITS = "0123456789"
-def encrypt(text, n): # текст и сдвиг
+def encrypt(text, n):
     table = {}
     for i in (RU, RU.upper(), EN, EN.upper(), DIGITS):
         k = n % len(i)
@@ -9,7 +9,7 @@ def encrypt(text, n): # текст и сдвиг
     return text.translate(table)
 
 def decrypt(text, n):
-    return encrypt(text, -n) # все гениальное факинг просто
+    return encrypt(text, -n)
 
 def run():
     com = input("Выберите режим ([ш]ифрование/[д]ешифрование): ")
@@ -20,4 +20,6 @@ def run():
     elif com == 'д':
         print(decrypt(orig, n))
     else:
-        print("Неизвестная команда")s
+        print("Неизвестная команда")
+
+# в соседнем файле результат выполнения, не понимаю, в чем ошибка
