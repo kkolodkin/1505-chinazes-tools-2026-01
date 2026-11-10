@@ -1,27 +1,34 @@
+
 import test
+import joke
 
 
 def print_menu():
     print(
-'''
+        """
 ============================
 Menu options
 
 1. Run Test Module
-2. Exit
+2. Programming Joke
+3. Exit
 ============================
-''')
+"""
+    )
+
 
 print("Hello! Welcome to Chinazes Tools!")
 
-while 1:
+while True:
     print_menu()
     user_choice = input("Select a menu option number: ")
     print()
-    
-    if user_choice == '1':
+
+    if user_choice == "1":
         test.run()
-    elif user_choice == '2':
+    elif user_choice == "2":
+        joke.run()
+    elif user_choice == "3":
         print("Bye!")
         break
     else:
