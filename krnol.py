@@ -1,4 +1,3 @@
-
 import random
 
 def print_board(board):
@@ -61,7 +60,7 @@ def play_game():
         if not move.isdigit() or not 1 <= int(move) <= 9:
             print("Введи число от 1 до 9!")
             continue
-
+        
         position = int(move) - 1
 
         if board[position] in ("X", "O"):
@@ -92,6 +91,3 @@ def play_game():
             print_board(board)
             print("Ничья!")
             break
-
-
-play_game()
