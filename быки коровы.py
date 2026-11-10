@@ -23,13 +23,13 @@ def check(secret, guess):
 def play():
     print('Добро пожаловать в игру <Быки коровы>!')
     print('Компьютер загадал 4-значоне число сразными цифрами')
-    print('Попробуйте его угададтью Удчи!\n')
+    print('Попробуйте его угададтью Удaчи!')
     secret = generate()
     att = 0
     while True:
         guess = input('Введите 4-значное число: ')
         if len(guess) != 4 or not guess.isdigit() or len(set(guess)) != 4:
-            print('Ты ошибка! Введите ровно 4 уникальные цифры.')
+            print('Ошибка! Введите ровно 4 уникальные цифры.')
             continue
         att += 1
         b, k = check(secret, guess)
