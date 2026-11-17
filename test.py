@@ -1,2 +1,3 @@
-def run():
-    print("test msg printed!")
+import krnol
+
+krnol.play_game()
