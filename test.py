@@ -1,2 +1,3 @@
-def run():
-    print("test msg printed!")
+import guessnum
+
+guessnum.run()
