@@ -11,8 +11,6 @@ def get_random_advice():
     except requests.exceptions.RequestException as e:
         return f"Ошибка при запросе к API: {e}"
 
-def main():
+def run():
     print("Случайный совет дня:")
     print(get_random_advice())
-if __name__ == "__main__":
-    main()
