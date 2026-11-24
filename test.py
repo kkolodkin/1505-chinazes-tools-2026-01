@@ -1,3 +1,3 @@
-import guessnum
+import krnol
 
-guessnum.run()
+krnol.play_game()
