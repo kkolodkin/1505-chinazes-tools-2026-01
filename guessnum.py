@@ -25,7 +25,7 @@ def play_guess_game():
                     return
                 break
 
-def main():
+def run():
     print("=== ИГРА УГАДАЙ ЧИСЛО ===")
     while True:
         print("1. Играть в игру")
@@ -38,6 +38,3 @@ def main():
             break
         else:
             print("Неверный ввод. Введите Y или N.")
-
-if __name__ == "__main__":
-    main()
